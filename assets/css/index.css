@@ -1,0 +1,325 @@
+/* ------------------ Reset Básico y Tipografía ------------------ */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Fundamental para el diseño responsivo */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #0d1b2a; /* Azul Oscuro de Fondo Principal */
+    color: #333333; /* Texto oscuro por defecto */
+    scroll-behavior: smooth;
+}
+
+/* ------------------ Encabezado y Navegación (Flexbox) ------------------ */
+.main-header {
+    background-color: #1b263b; /* Azul más oscuro para el header */
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.logo-branding {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 200px;
+    margin-right: 15px;
+}
+
+.brand-name {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.main-nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.main-nav ul li a:hover {
+    background-color: #fdb913; /* Dorado/Amarillo de Alerta */
+    color: #1b263b;
+}
+
+/* ------------------ Estilos de Sección General ------------------ */
+.content-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-section {
+    background-color: #e0e1eb; /* Gris claro para contraste */
+}
+
+.services-section {
+    background-color: #ffffff; 
+}
+
+.contact-section {
+    background-color: #e0e1eb;
+}
+
+h2 {
+    color: #004a77; /* Azul corporativo */
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    border-bottom: 3px solid #fdb913;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* ------------------ Sección Hero (Inicio) ------------------ */
+.hero-section {
+    /* Usar un color sólido o una imagen con superposición para un aspecto limpio */
+    background: #004a77; 
+    color: #ffffff;
+    padding: 150px 20px;
+    text-align: center;
+}
+
+.hero-section h2 {
+    font-size: 3.5rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    border-bottom: none;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* Botones */
+.btn-principal, .btn-secundario {
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-principal {
+    background-color: #fdb913;
+    color: #1b263b;
+}
+
+.btn-principal:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+}
+
+
+/* ------------------ Sección Servicios (Grid) ------------------ */
+.services-grid {
+    display: grid;
+    /* Cuatro columnas en escritorio, adaptable */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.service-item {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-top: 5px solid #004a77;
+    transition: box-shadow 0.3s, border-top-color 0.3s;
+}
+
+.service-item:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-top-color: #fdb913;
+}
+
+.service-img {
+    height: 100px; 
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.service-item h3 {
+    color: #004a77;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.service-item p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.btn-secundario {
+    background-color: #004a77;
+    color: #ffffff;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    padding: 8px 15px;
+}
+
+.btn-secundario:hover {
+    background-color: #003366;
+}
+
+/* ------------------ Sección Contacto y Mapa (Flexbox) ------------------ */
+.contact-map-container {
+    display: flex;
+    gap: 40px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.contact-form {
+    flex: 1; /* Ocupa espacio flexible */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mapa {
+    flex: 1; /* Ocupa espacio flexible */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mapa h3 {
+    color: #004a77;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.mapa iframe {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    border-color: #004a77;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 74, 119, 0.2);
+}
+
+.btn-enviar {
+    background-color: #004a77;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #003366;
+}
+
+/* ------------------ Pie de página ------------------ */
+footer {
+    background-color: #1b263b;
+    color: #aeb8c3;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.footer-redes a {
+    color: #fdb913;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-redes a:hover {
+    color: #ffffff;
+}
+
+/* ------------------ Media Queries (Responsividad) ------------------ */
+
+/* Tablet y Escritorio pequeño */
+@media (max-width: 900px) {
+    .main-header {
+        padding: 15px 20px;
+    }
+    /* Contacto apilado */
+    .contact-map-container {
+        flex-direction: column;
+    }
+}
+
+/* Móvil */
+@media (max-width: 650px) {
+    /* Header apilado */
+    .main-header {
+        flex-direction: column;
+        padding: 15px 10px;
+    }
+    
+    .logo-branding {
+        margin-bottom: 15px;
+    }
+.brand-name{
+     font-size: 1.5rem;
+
+}
+    .main-nav ul {
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    /* Ajuste de Tipografía y Padding */
+    .hero-section h2 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .content-section {
+        padding: 40px 15px;
+    }
+}
